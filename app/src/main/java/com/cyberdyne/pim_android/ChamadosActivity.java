@@ -1,13 +1,13 @@
-package com.cyberdyne.pim_android; // Verifique se o nome do seu pacote está correto
+package com.cyberdyne.pim_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar; // <-- IMPORTAÇÃO ADICIONADA
+import androidx.appcompat.widget.Toolbar; // <-- IMPORTAÇÃO DA TOOLBAR
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem; // <-- IMPORTAÇÃO ADICIONADA
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -64,17 +64,15 @@ public class ChamadosActivity extends AppCompatActivity {
         carregarChamadosDaApi();
     }
 
-    // --- NOVO MÉTODO ADICIONADO (PARA O CLIQUE DA SETA "VOLTAR") ---
+    // Método para o clique da seta "Voltar"
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Verifica se o item clicado é o "home" (a seta "Voltar")
         if (item.getItemId() == android.R.id.home) {
-            finish(); // Fecha a tela atual (ChamadosActivity) e volta para a anterior (DashboardActivity)
+            finish(); // Fecha a tela atual e volta para a anterior
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
-    // --- FIM DO NOVO MÉTODO ---
 
     /**
      * Busca os chamados na API e atualiza a lista

@@ -1,14 +1,14 @@
-package com.cyberdyne.pim_android; // Verifique se o pacote está correto
+package com.cyberdyne.pim_android;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar; // <-- IMPORTAÇÃO ADICIONADA
+import androidx.appcompat.widget.Toolbar; // <-- IMPORTAÇÃO DA TOOLBAR
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.MenuItem; // Import para a seta de voltar
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -34,7 +34,7 @@ public class ChamadoDetalheActivity extends AppCompatActivity {
 
         // --- CÓDIGO DA TOOLBAR ADICIONADO ---
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar); // Define nossa toolbar customizada como a barra de ação
+        setSupportActionBar(toolbar);
 
         // Habilita a seta "Voltar" (Up Button)
         if (getSupportActionBar() != null) {
@@ -54,7 +54,6 @@ public class ChamadoDetalheActivity extends AppCompatActivity {
         textViewResolucao = findViewById(R.id.textViewDetalheResolucao);
         buttonVerAnexo = findViewById(R.id.buttonVerAnexo);
 
-        // Pega o objeto ChamadoModel que foi passado da tela anterior
         chamado = (ChamadoModel) getIntent().getSerializableExtra(EXTRA_CHAMADO);
 
         if (chamado != null) {
