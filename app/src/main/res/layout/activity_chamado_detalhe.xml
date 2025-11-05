@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChamadoDetalheActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#007BFF"
+            app:title="Detalhes do Chamado"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F8FF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/textViewDetalheId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="#12"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/textViewDetalheStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Aberto"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded_corner_red" />
+            </LinearLayout>
+
+            <TextView
+                android:text="Tipo de Chamado:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textViewDetalheTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Suporte de Software"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:text="Nível de Urgência:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textViewDetalheUrgencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="MedioUrgente"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:text="Data de Abertura:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textViewDetalheData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="17/10/2025 13:30"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:text="Descrição Completa:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textViewDetalheDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Descrição longa do problema..."
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border_background"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/labelResolucao"
+                android:text="Resolução Aplicada:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/textViewDetalheResolucao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Resolução..."
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border_background"
+                android:padding="8dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonVerAnexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Anexo"
+                android:backgroundTint="#007BFF"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

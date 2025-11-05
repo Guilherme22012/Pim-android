@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp"
+    android:background="#F0F8FF"
+    tools:context=".DashboardActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/cyberdyne_logo"
+        android:contentDescription="Cyberdyne Systems Logo" />
+    <TextView
+        android:id="@+id/textViewBemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo, Usuário!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/buttonVerChamados"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Ver Meus Chamados"
+        android:textSize="18sp"
+        android:backgroundTint="#007BFF"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonGerenciarFuncionarios"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Gerenciar Funcionários"
+        android:textSize="18sp"
+        android:backgroundTint="#17a2b8"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Sair (Logout)"
+        android:textSize="18sp"
+        android:backgroundTint="#dc3545" />
+
+</LinearLayout>
